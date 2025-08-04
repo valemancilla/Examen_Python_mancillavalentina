@@ -66,10 +66,10 @@ if __name__ == "__main__":
         elif opcion == 3:
             mn.main_menu_chefs()
         elif opcion == 4:
-            mn.main_menu_editar()
+            pass
         elif opcion == 5:
-            mn.main_menu_eliminar_elementos()
+            pass
         elif opcion == 6:
-            mn.main_menu_elementos_categoria()
+            pass
         elif opcion == 7:
             break

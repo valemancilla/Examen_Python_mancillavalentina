@@ -3,6 +3,7 @@ import controllers.ingredientes as gr
 import controllers.categorias as ca
 import controllers.cheft as ch
 import controllers.hamburgesas as ha
+import controllers.reportes as re
 
 def main_ingredientes():
     while True:
@@ -169,15 +170,15 @@ def main_menu_hamburgesas():
 
 
 
-def main_menu_eliminar_elementos():
+def main_menu_reportes():
     while True:
         sc.limpiar_pantalla()
         print('===========================================')
-        print('         Eliminar un Elemento')
+        print('         MENU REPORTES')
         print('===========================================')
-        print('¿Cómo deseas eliminar?')
-        print('1. Eliminar por Título')
-        print('2. Eliminar por Identificador Único')
+        print('1. ver hamburgesa por categoria')
+        print('2. ver hamburgesa por chef')
+        print('3. ver hamburgesa mas cara')
         print('3. Regresar al Menú Principal')
         print('===========================================')
 
@@ -185,12 +186,15 @@ def main_menu_eliminar_elementos():
             opcion = int(input('\nSelecciona una opción (1-3): '))
             
             if opcion == 1:
-                el.eliminar_por_titulo()
+                re.hamburguesas_por_categoria()
 
             elif opcion == 2:
-               el.eliminar_por_id()
+               re.hamburguesas_por_chef()
 
             elif opcion == 3:
+                re.hamburguesa_mas_cara()
+
+            elif opcion == 4:
                 print("\nRegresando al menú principal...")
                 break  
 
@@ -210,40 +214,4 @@ def main_menu_eliminar_elementos():
 
                                 
                 
-def main_menu_elementos_categoria():
-    while True:
-        sc.limpiar_pantalla()
-        print('===========================================')
-        print(      'Ver Elementos por Categoría'          )
-        print('===========================================')
-        print('¿Qué categoría deseas ver? '        )
-        print('1. Libros')
-        print('2. Películas')
-        print('3. Música')
-        print('4. Regresar al Menú Principal')
-        print('===========================================')
 
-        try:
-            opcion = int(input('\nSelecciona una opción (1-4): '))
-
-            if opcion == 1:
-                ca.mostrar_categoria_libros()
-                
-              
-            elif opcion == 2:
-                ca.mostrar_categoria_peliculas()
-               
-              
-            elif opcion == 3:
-                ca.mostrar_categoria_musica()
-                
-                
-            elif opcion == 4:
-                print("\nRegresando al menú principal...")
-                break
-            else:
-                print("\nOpción inválida. Por favor, ingresa un número del 1 al 4.")
-        except ValueError:
-            print("\nEntrada no válida. Por favor, ingresa un número del 1 al 4.")
-
-        sc.pausar()

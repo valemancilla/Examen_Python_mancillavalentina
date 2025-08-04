@@ -29,7 +29,7 @@ def agregar_categoria():
 def ver_categoria():
     categoria=cargar_categoria()
     for cat in categoria:
-        print(f"{cat["nombre"]}-{cat['descripcion']}")
+        print(f'{cat['nombre']}-{cat['descripcion']}')
 
 def actualizar_categoria():
     categoria=categorias_file()
