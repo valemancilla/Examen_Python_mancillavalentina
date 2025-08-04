@@ -28,7 +28,7 @@ def agregar_chef():
 def ver_chefs():
     chefs=cargar_chef()
     for chef in chefs:
-        print(f"{chef["nombre"]}-{chef["especialidad"]}")
+        print(f'{chef['nombre']} - {chef['especialidad']}')
 
 def actualizar_chef():
     chefs=cargar_chef()
