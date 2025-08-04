@@ -1,10 +1,8 @@
-import utils.screencontrollers as sc
+import utils.screencontroller as sc
 import controllers.ingredientes as gr
-import controllers.listar as ls
-import controllers.buscar as bs
-import controllers.editar as ed
-import controllers.eliminar as el
-import controllers.categoria as ca
+import controllers.categorias as ca
+import controllers.cheft as ch
+
 def main_ingredientes():
     while True:
         sc.limpiar_pantalla()
@@ -53,30 +51,33 @@ def main_menu_ver_elementos():
     while True:
         sc.limpiar_pantalla()
         print('===========================================')
-        print('          Ver Todos los Elementos')
+        print('          MENU CATEGORIAS')
         print('===========================================')
-        print('¿Qué categoría deseas ver?')
-        print('1. Ver Todos los Libros')
-        print('2. Ver Todas las Películas')
-        print('3. Ver Toda la Música')
-        print('4. Regresar al Menú Principal')
+        print('1. ver categorias')
+        print('2. agregar categorias')
+        print('3. actualizar categoria')
+        print('4. eliminar categoria')
+        print('5. Regresar al Menú Principal')
         print('===========================================')
 
         try:
             opcion = int(input('\nSelecciona una opción (1-4): '))
             if opcion == 1:
-                ls.listar_libros()
+                ca.ver_categoria()
                 
 
             elif opcion == 2:
-                ls.listar_peliculas()
+                ca.agregar_categoria()
                 
 
             elif opcion == 3:
-                ls.listar_musica()
+                ca.actualizar_categoria()
                 
 
             elif opcion == 4:
+                ca.eliminar_categoria()
+
+            elif opcion == 5:
                 print("\nRegresando al menú principal...")
                 break
             else:
@@ -91,28 +92,31 @@ def main_menu_buscar():
     while True:
         sc.limpiar_pantalla()
         print('===========================================')
-        print('        Buscar un Elemento')
+        print('              MENU CHEFS')
         print('===========================================')
-        print('¿Cómo deseas buscar?')
-        print('1. Buscar por Título')
-        print('2. Buscar por Autor/Director/Artista')
-        print('3. Buscar por Género')
-        print('4. Regresar al Menú Principal')
+        print('1. ver chefs')
+        print('2. agregar chefs')
+        print('3. actualizar chefs')
+        print('4. eliminar chefs')
+        print('5. Regresar al Menú Principal')
         print('===========================================')
 
         try:
             op = int(input('\nSelecciona una opción (1-4): '))
             if op == 1:
-                bs.buscar_por_titulo()
+                ch.ver_chefs()
                 
 
             elif op == 2:
-                bs.buscar_por_autor()
+                ch.agregar_chef()
 
             elif op == 3:
-                bs.buscar_por_genero()
+                ch.actualizar_chef()
 
             elif op == 4:
+                ch.eliminar_chef()
+
+            elif op == 5:
                 print("\nRegresando al menú principal...")
                 break
             else:
@@ -126,12 +130,11 @@ def main_menu_editar():
     while True:
         sc.limpiar_pantalla()
         print('===========================================')
-        print('        Editar un Elemento')
+        print('        MENU HAMBURGUESAS ')
         print('===========================================')
-        print('¿Qué tipo de cambio deseas realizar?')
-        print('1. Editar Título')
-        print('2. Editar Autor/Director/Artista')
-        print('3. Editar Género')
+        print('1. ver hamburgesas')
+        print('2. agregar hamburgesas')
+        print('3. actualizar hambuergesas')
         print('4. Editar Valoración')
         print('5. Regresar al Menú Principal')
         print('===========================================')

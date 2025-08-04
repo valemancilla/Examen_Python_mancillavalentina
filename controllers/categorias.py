@@ -47,4 +47,3 @@ def eliminar_categoria():
     categorias=[cat for cat in categorias if cat ["nombre"].lower()!=nombre.lower()]
     guardar_categoria(categorias)
     print("categoria eliminada")
-    
