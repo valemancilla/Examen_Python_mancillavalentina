@@ -2,6 +2,7 @@ import utils.screencontroller as sc
 import controllers.ingredientes as gr
 import controllers.categorias as ca
 import controllers.cheft as ch
+import controllers.hamburgesas as ha
 
 def main_ingredientes():
     while True:
@@ -47,7 +48,7 @@ def main_ingredientes():
         
   
 
-def main_menu_ver_elementos():
+def main_menu_categorias():
     while True:
         sc.limpiar_pantalla()
         print('===========================================')
@@ -88,7 +89,7 @@ def main_menu_ver_elementos():
             print('\nEntrada no válida. Por favor, ingresa un número.')
             sc.pausar()
 
-def main_menu_buscar():
+def main_menu_chefs():
     while True:
         sc.limpiar_pantalla()
         print('===========================================')
@@ -126,7 +127,7 @@ def main_menu_buscar():
             print("\nEntrada no válida. Por favor, introduce un número.")
             sc.pausar()
 
-def main_menu_editar():
+def main_menu_hamburgesas():
     while True:
         sc.limpiar_pantalla()
         print('===========================================')
@@ -135,23 +136,23 @@ def main_menu_editar():
         print('1. ver hamburgesas')
         print('2. agregar hamburgesas')
         print('3. actualizar hambuergesas')
-        print('4. Editar Valoración')
+        print('4. eliminar hamburguesas')
         print('5. Regresar al Menú Principal')
         print('===========================================')
 
         try:
             op = int(input('\nSelecciona una opción (1-5): '))
             if op == 1:
-                ed.editar_titulo_por_nombre()
+                ha.ver_hamburguesas()
                 
             elif op == 2:
-                ed.editar_autor_por_nombre()
+                ha.agregar_hamburguesa()
                 
             elif op == 3:
-                ed.editar_genero_por_nombre()
+                ha.actualizar_hamburguesa()
                 
             elif op == 4:
-                ed.editar_calificacion_por_nombre()
+                ha.eliminar_hamburguesa()
                 
             elif op == 5:
                 print("\nRegresando al menú principal...")

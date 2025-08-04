@@ -60,11 +60,11 @@ if __name__ == "__main__":
         opcion = main_menu()
 
         if opcion == 1:
-            mn.main_menu_añadir()
+            mn.main_ingredientes()
         elif opcion == 2:
-            mn.main_menu_ver_elementos()
+            mn.main_menu_hamburgesas()
         elif opcion == 3:
-            mn.main_menu_buscar()
+            mn.main_menu_chefs()
         elif opcion == 4:
             mn.main_menu_editar()
         elif opcion == 5:
